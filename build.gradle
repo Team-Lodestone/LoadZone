@@ -22,12 +22,12 @@ dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-	exceptions ploceus.raven(project.raven_build)
-	signatures ploceus.sparrow(project.sparrow_build)
 	nests ploceus.nests(project.nests_build)
 	mappings ploceus.featherMappings(project.feather_build)
+}
 
-	ploceus.dependOsl(project.osl_version)
+loom {
+	accessWidenerPath = file("src/main/resources/loadzone.classtweaker")
 }
 
 processResources {
