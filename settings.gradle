@@ -16,3 +16,7 @@ pluginManagement {
 		gradlePluginPortal()
 	}
 }
+
+rootProject.name = "LoadZone"
+include 'versions:inf624'
+include 'versions:b1.2_02-20110517'

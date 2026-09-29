@@ -1,6 +1,7 @@
 package me.dexrn.loadzone.mixin;
 
-import me.dexrn.loadzone.screen.LoadNoneLoadZoneWorldScreen;
+import me.dexrn.loadzone.LoadZoneMarkerFile;
+import me.dexrn.loadzone.screen.LoadVanillaLevelConfirmationScreen;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screen.menu.world.SelectWorldScreen;
 import net.minecraft.client.gui.widget.ButtonWidget;
@@ -20,12 +21,10 @@ public abstract class WorldScreenMixin {
 					File saves = new File(Minecraft.getWorkingDirectory(), "saves");
 					File world = new File(saves, "World" + (widget.id + 1));
 					if (world.exists() && world.isDirectory()) {
-						File check = new File(world, ".loadzone");
-
-						if (!check.exists() || !check.isFile()) {
+						if (!LoadZoneMarkerFile.exists(world)) {
 							SelectWorldScreen self = (SelectWorldScreen) (Object) this;
 
-							self.minecraft.openScreen(new LoadNoneLoadZoneWorldScreen(self, widget.id + 1));
+							self.minecraft.openScreen(new LoadVanillaLevelConfirmationScreen(self, widget.id + 1));
 							ci.cancel();
 						}
 					}

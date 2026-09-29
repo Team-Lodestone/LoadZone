@@ -8,7 +8,7 @@
 	"client": [
     "ZonedChunkStorageMixin",
     "WorldScreenMixin",
-    "MinecraftMixin"
+    "LevelMixin"
 	],
 	"server": [
 	],

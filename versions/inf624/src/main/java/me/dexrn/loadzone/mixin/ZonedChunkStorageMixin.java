@@ -46,7 +46,7 @@ public class ZonedChunkStorageMixin {
 		int zoneX = cx >> CHUNKS_PER_ZONE_BITS;
 		int zoneZ = cz >> CHUNKS_PER_ZONE_BITS;
 
-		long position = zoneX + (zoneZ << 20);
+		long position = zoneX + ((long) zoneZ << 20);
 		if (!this.zones.containsKey(position)) {
 			File zone = new File(this.dir, ZONE_FILENAME + "_" + Integer.toString(zoneX, 36) + "_" + Integer.toString(zoneZ, 36) + ".dat");
 			if (!zone.exists()) {

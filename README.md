@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="./src/main/resources/assets/loadzone/icon.png" width="64" height="64">
+	<img src="versions/inf624/resources/assets/loadzone/icon.png" width="64" height="64">
 </p>
 
 <h1 align="center">LoadZone</h1>

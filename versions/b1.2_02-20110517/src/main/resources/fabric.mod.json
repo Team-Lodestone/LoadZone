@@ -1,0 +1,30 @@
+{
+	"schemaVersion": 1,
+	"id": "load_zone",
+	"version": "${version}",
+	"name": "LoadZone",
+	"description": "A small Ornithe mod to fix Notch's broken Zone filename code in Infdev 20100624",
+	"authors": [
+		"Dexrn ZacAttack"
+	],
+	"contact": {
+		"homepage": "https://team-lodestone.github.io/",
+		"sources": "https://github.com/Team-Lodestone/LoadZone"
+	},
+	"license": "MIT",
+	"icon": "assets/loadzone/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"init": [
+      "me.dexrn.loadzone.LoadZone"
+		]
+	},
+  "accessWidener": "loadzone.accesswidener",
+	"mixins": [
+		"loadzone.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.0",
+    "minecraft": "1.0.0-beta.2.2"
+	}
+}
