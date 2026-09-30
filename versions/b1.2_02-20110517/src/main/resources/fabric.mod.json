@@ -3,7 +3,7 @@
 	"id": "loadzone",
 	"version": "${version}",
 	"name": "LoadZone",
-	"description": "A small Ornithe mod to fix Notch's broken Zone filename code in Infdev 20100624",
+	"description": "A small mod to fix Notch's broken Zone filename code in Beta 1.2_02-20110517",
 	"authors": [
 		"Dexrn ZacAttack"
 	],

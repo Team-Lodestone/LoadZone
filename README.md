@@ -1,10 +1,11 @@
-<p align="center">
-	<img src="versions/inf624/src/main/resources/assets/loadzone/icon.png" width="64" height="64">
-</p>
+<div align="center">
+<img src="versions/inf624/src/main/resources/assets/loadzone/icon.png" width="128" height="128" alt="LoadZone icon">
+<h1 style="padding-top: 0;">LoadZone</h1>
 
-<h1 align="center">LoadZone</h1>
+[![Download](https://img.shields.io/modrinth/v/LoadZone?logo=modrinth&label=Modrinth&color=0bc95a)](https://modrinth.com/mod/LoadZone)
+</div>
 <hr>
-A small Ornithe mod to fix Notch's broken Zone filename code in Infdev 20100624
+A small Ornithe mod to fix Notch's broken Zone filename code in Infdev 20100624 and Beta 1.2_02-20110517
 
 ### *Why?*
 When Notch was developing the Zone file format, he had set the filenames to use the chunk coordinates passed into the method, instead of using the Zone's coordinates.
@@ -12,7 +13,7 @@ When Notch was developing the Zone file format, he had set the filenames to use 
 Because of how the method is called, anytime the game attempts to get a chunk that is in a new zone, a new Zone file is created.
 
 This breaks many things:
-- Because the first chunk that is called for is not always at chunk offset `0,0`, the filenames are almost random, as they are based on whatever the first chunk the client decided to load was at that time. 
+- Because the first chunk that is called for is not always at relative chunk offset `0,0`, the filenames are almost random, as they are based on whatever the first chunk the client decided to load was at that time. 
 - World writers are broken, as the client will NOT load chunks whose chunk position does not match the Zone file's name.
   - In [libLodestone](https://github.com/Team-Lodestone/libLodestone), we have decided to follow the format of LoadZone by writing the Zone coordinates, instead of some random chunk coordinates.
 - There's a chance that on load, the first chunk to load in a given Zone is NOT the same as the one that initially created it.
